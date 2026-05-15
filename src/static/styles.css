@@ -190,6 +190,43 @@ section h3 {
   justify-content: center;
 }
 
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.share-button {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.share-button:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-text);
+}
+
+.share-button-primary {
+  background-color: var(--primary);
+  color: var(--primary-text);
+  border-color: var(--primary);
+}
+
+.share-button-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.shared-activity {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.15);
+}
+
 /* Activity Tag */
 .activity-tag {
   position: absolute;
@@ -608,6 +645,14 @@ footer {
   }
 
   .sidebar-filters {
+    width: 100%;
+  }
+
+  .share-actions {
+    flex-direction: column;
+  }
+
+  .share-button {
     width: 100%;
   }
 }
