@@ -30,6 +30,31 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+  --tooltip-background: rgba(33, 33, 33, 0.9);
+  --tooltip-text: #ffffff;
+  --header-control-background: rgba(255, 255, 255, 0.2);
+  --header-control-background-hover: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode {
+  --background: #121826;
+  --surface: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --border: #334155;
+  --border-light: #475569;
+  --border-focus: #64748b;
+  --primary: #3f51b5;
+  --primary-light: #6573c3;
+  --primary-dark: #2c387e;
+  --success-light: #1b4332;
+  --warning-light: #4a3b12;
+  --error-light: #4b1f1f;
+  --info-light: #173d46;
+  --tooltip-background: rgba(15, 23, 42, 0.95);
+  --header-control-background: rgba(15, 23, 42, 0.35);
+  --header-control-background-hover: rgba(15, 23, 42, 0.55);
+  color-scheme: dark;
 }
 
 * {
@@ -48,6 +73,7 @@ body {
   padding: 12px;
   background-color: var(--background);
   font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 header {
@@ -307,8 +333,8 @@ button {
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  background-color: rgba(33, 33, 33, 0.9);
-  color: #fff;
+  background-color: var(--tooltip-background);
+  color: var(--tooltip-text);
   text-align: center;
   padding: 8px 12px;
   border-radius: 4px;
@@ -492,6 +518,8 @@ footer {
   border-radius: 20px 0 0 20px;
   font-size: 0.85rem;
   transition: all 0.3s ease;
+  background-color: var(--surface);
+  color: var(--text-primary);
 }
 
 .search-box input:focus {
@@ -617,6 +645,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #user-status {
@@ -639,7 +670,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--header-control-background);
   border-radius: 20px;
   padding: 4px 12px;
   font-size: 0.85rem;
@@ -647,7 +678,7 @@ footer {
 }
 
 .icon-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--header-control-background-hover);
 }
 
 .user-icon {
@@ -656,11 +687,11 @@ footer {
 
 #logout-button {
   padding: 3px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--header-control-background);
   font-size: 0.8rem;
   border-radius: 20px;
 }
 
 #logout-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--header-control-background-hover);
 }
